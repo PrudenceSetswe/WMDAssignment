@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us |   Ink and Paper</title>
+  <link rel="stylesheet" href="style1.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=EB+Garamond&display=swap" rel="stylesheet">
+  <style>
+.contact {
+    padding: 8rem 9%;
+    background: #F5EFE0;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 5rem;
+    margin-top: 4rem;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.info-item i {
+    font-size: 2.5rem;
+    color: #6B0F1A;
+    margin-top: 0.5rem;
+}
+
+.info-item h4 {
+    font-size: 1.8rem;
+    color: #3A2C2A;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.contact-form {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+    margin-bottom: 2rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #ddd;
+    background: #f9f9f9;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #6B0F1A;
+    background: #fff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 15rem;
+}
+  </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="header-1">
+            <a href="#" class="logo"><i class="fas fa-book"></i>INK & PAPER</a>
+            <form action="" class="search-form">
+                <input type="search" placeholder="Search tomes..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="wishlist.html" class="fas fa-heart"></a>
+                <a href="cart.html" class="fas fa-shopping-cart">
+                    <span class="cart-count">0</span>
+                </a>  
+                <a href="sign-in.html" class="fas fa-user"></a>
+            </div>
+        </div>
+
+        <div class="header-2">
+            <nav class="navbar">
+                <a href="index1.html">HOME</a>
+                <a href="featured.html">FEATURED</a>
+                <a href="arrivals.html">ARRIVALS</a>
+                <a href="reviews.html">REVIEWS</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="blogs.html">BLOGS</a>
+            </nav>
+        </div>
+    </header>
+  <main class="contact-container">
+    <h1><span class="quill-icon">✉</span> Contact the Librarian</h1>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <select id="subject">
+          <option value="general">General Inquiry</option>
+          <option value="book">Book Suggestion</option>
+          <option value="issue">Technical Issue</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </main>
+
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About INK & PAPER</h3>
+                <p>Your premier destination for classic and contemporary literature since 2023.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="#featured.html">Featured</a></li>
+                    <li><a href="#arrivals.html">New Arrivals</a></li>
+                    <li><a href="#reviews.html">Reviews</a></li>
+                    <li><a href="#contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Manila, Botswana</p>
+                <p><i class="fas fa-phone"></i> +267 71 234 567</p>
+                <p><i class="fas fa-envelope"></i> info@inkandpaper.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 INK & PAPER | Designed by Prudence Setswe
+        </div>
+    </footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+:root {
+    --primary-dark: #2A1A1F;
+    --secondary-dark: #3B2C35;
+    --accent-gold: #C5A880;
+    --parchment: #F5EFE0;
+    --blood-red: #6B0F1A;
+}
+
+/* Logo Styling */
+.logo-image {
+    filter: sepia(70%) contrast(1.1) brightness(0.9); /* Vintage effect */
+    border: 2px solid var(--accent-gold);
+    border-radius: 50%; /* Makes circular if desired */
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-image:hover {
+    transform: scale(1.05) rotate(-5deg); /* Subtle interactive effect */
+  }
+  
+  /* For parchment-style logo background (optional) */
+  .branding::before {
+    content: "";
+    background: url('assets/images/parchment-texture.jpg') center/cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  
+body {
+    background-color: var(--primary-dark);
+    color: var(--parchment);
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+}
+
+.main-header {
+    background: linear-gradient(rgba(42,26,31,0.9), rgba(42,26,31,0.9)),
+                url('../images/header-bg.jpg');
+    padding: 2rem;
+    border-bottom: 3px solid var(--accent-gold);
+}
+
+.branding h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: var(--accent-gold);
+    font-size: 2.5rem;
+}
+
+.main-nav a {
+    color: var(--parchment);
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: var(--accent-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+}

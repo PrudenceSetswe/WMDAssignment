@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store Website</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+   .blogs {
+    padding: 8rem 9%;
+    background: #f0e6d6;
+}
+
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35rem, 1fr));
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.blog-card {
+    background: #fff;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-1rem);
+    box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+    position: relative;
+    height: 25rem;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.1);
+}
+
+.blog-date {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    background: rgba(107, 15, 26, 0.8);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.blog-content {
+    padding: 2.5rem;
+}
+
+.blog-content h3 {
+    font-size: 2rem;
+    color: #3A2C2A;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.blog-content p {
+    font-size: 1.5rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #6B0F1A;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    color: #8B0000;
+}
+
+.read-more:hover i {
+    transform: translateX(0.5rem);
+}
+
+.view-all-blogs {
+    text-align: center;
+    margin-top: 5rem;
+}
+</style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-1">
+            <a href="#" class="logo"><i class="fas fa-book"></i>INK & PAPER</a>
+
+            <form action="" class="search-form">
+                <input type="search" name="" placeholder="search here..." id="search-box">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+            <div class="icons">
+                <div id="search-btn" class="fas fa-search"></div>
+                <a href="wishlist.html" class="fas fa-heart"></a>
+                <a href="cart.html" class="fas fa-shopping-cart">
+                    <span class="cart-count">0</span>
+                </a>  
+                <a href="sign-in.html" class="fas fa-user"></a>
+            </div>
+        </div>
+
+         <div class="header-2">
+            <nav class="navbar">
+                <a href="index1.html">HOME</a>
+                <a href="featured.html">FEATURED</a>
+                <a href="arrivals.html">ARRIVALS</a>
+                <a href="reviews.html">REVIEWS</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="blogs.html">BLOGS</a>
+            </nav>
+        </div>
+    </header>
+     <section class="blogs" id="blogs">
+        <h2 class="section-title">Our Blog</h2>
+        <div class="blog-container">
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="main/albert.jpg" alt="Literary Analysis">
+                    <div class="blog-date">May 15, 2023</div>
+                </div>
+                <div class="blog-content">
+                    <h3>The Enduring Legacy of Classic Literature</h3>
+                    <p>Exploring why classic literature remains relevant in today's digital age and how it continues to influence modern writing.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="main/novelist.jpg" alt="Book Collection">
+                    <div class="blog-date">April 28, 2023</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Building Your Personal Library: A Beginner's Guide</h3>
+                    <p>Tips and strategies for starting and organizing your personal book collection, from choosing editions to proper storage.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            
+            <div class="blog-card">
+                <div class="blog-image">
+                    <img src="main/george.jpg" alt="Author Interview">
+                    <div class="blog-date">April 10, 2023</div>
+                </div>
+                <div class="blog-content">
+                    <h3>Interview with Award-Winning Author Jane Doe</h3>
+                    <p>An exclusive conversation about her latest novel, writing process, and the challenges of modern publishing.</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="view-all-blogs">
+            <a href="#" class="btn">View All Blog Posts</a>
+        </div>
+        <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>About INK & PAPER</h3>
+                <p>Your premier destination for classic and contemporary literature since 2023.</p>
+                <div class="socials">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="#featured.html">Featured</a></li>
+                    <li><a href="#arrivals.html">New Arrivals</a></li>
+                    <li><a href="#reviews.html">Reviews</a></li>
+                    <li><a href="#contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Book Street, Manila, Botswana</p>
+                <p><i class="fas fa-phone"></i> +267 71 234 567</p>
+                <p><i class="fas fa-envelope"></i> info@inkandpaper.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+    </section>
